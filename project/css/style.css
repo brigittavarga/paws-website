@@ -77,7 +77,7 @@ nav ul {
     padding-right: 100px;
 }
 
-.col-1 {
+.col {
     width: 40%;
 }
 
@@ -87,24 +87,6 @@ nav ul {
     align-items: center;
 }
 
-.location img {
-    margin-bottom: 30px;
-}
-
-.location input {
-    width: 65%;
-    border-color: #FDB0BF;
-    padding: 15px;
-    font-family: 'Montserrat', sans-serif;
-    background: url(../icons/locationmarker.png) no-repeat scroll 7px 7px;
-    background-position: 95% center;
-    padding-left: 40px;
-    border-radius: 5px;
-}
-
-.location p {
-    font-size: 1rem;
-}
 
 /* ----------------- HEADER ----------------- */
 
@@ -212,17 +194,117 @@ nav ul li:last-child a:hover {
 
 #contact-us {
     border: none;
+    position: relative;
 }
 
 #contact-us img.cat-1 {
     position: absolute;
-    left: 400px;
-    top: 2000px;
+    left: 0;
+    top: 50px;
+    transform: translate(-50%, -50%);
     z-index: -2;
 }
 
 #contact-us img.cat-2 {
     position: absolute;
-    right: 350px;
-    bottom: -1850px;
+    right: 0;
+    bottom: 50px;
+    transform: translate(50%, 50%);
+}
+
+.location img {
+    margin-bottom: 30px;
+}
+
+.location input {
+    width: 65%;
+    border-color: #FDB0BF;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    background: url(../icons/locationmarker.png) no-repeat scroll 7px 7px;
+    background-position: 95% center;
+    padding-left: 40px;
+    border-radius: 5px;
+}
+
+.location p {
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+@media(max-width: 978px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 80%;
+    }
+
+    .col-1 {
+        text-align: center;
+    }
+
+    .location img {
+        width: 100%;
+    }
+
+    .location input {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-container span {
+        display: none;
+    }
+
+    .nav-container img {
+        padding-bottom: 20px;
+    }
+
+    .nav-container img {
+        margin: 0 auto;
+    }
+
+    .col-img {
+        padding: 2px;
+    }
+
+    .adopting p {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .adopting button {
+        width: 340px;
+    }
+
+    .button-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-us img.cat-1 {
+        top: 90px;
+    }
+    
+    #contact-us img.cat-2 {
+        right: 40px;
+    }
 }
